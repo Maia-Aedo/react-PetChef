@@ -1,0 +1,142 @@
+.home-main {
+    background-image: url('https://baonadogs.com/wp-content/uploads/2022/05/comida-casera-para-perros-scaled.jpg');
+    background-size: cover; 
+    height: 80vh;
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+}
+
+.home-main-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.home-main-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #7a69b8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #879cdb;
+}
+
+.home-about {
+    padding: 50px;
+    background-color: #f7f7f7;
+    align-items: center;
+    text-align: center;
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+.home-about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.home-about p {
+    font-size: 1.2rem;
+}
+
+.recipes-section {
+    padding: 15px;
+    text-align: center;
+}
+
+.recipes-section h2 {
+    font-size: 2rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 250px;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.home-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home-parallax {
+    background-image: linear-gradient(to bottom, #7362b3, #885db9, #a174d4, #6573c2, #92c1de, #98c4e7, #ab99e0, #c77cc6, #db5b9a);
+    background-attachment: fixed;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-parallax h2{
+    font-size: 2rem;
+}
+
+.home-parallax p{
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .home-main-text h1 {
+        font-size: 2rem;
+    }
+
+    .home-main-text p {
+        font-size: 1.2rem;
+    }
+
+    .home-about h2, .recipes-section h2, .home-parallax-text h2 {
+        font-size: 2rem;
+    }
+
+    .home-about p, .home-main-text p, .home-parallax-text p {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card img{
+        width: 160px;
+        height: 130px;
+    }
+
+    .home-parallax {
+        background-attachment: scroll;
+    }
+}
