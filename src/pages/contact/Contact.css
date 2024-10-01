@@ -34,12 +34,16 @@
 .contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
+    gap: 30px;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 80%;
+form .field{
+    width: 70%;
+}
+
+.contact-form #message, .contact-form #email, .contact-form #name {
+    width: 100%;
     padding: 12px;
     border: 1px solid #db5b9a;
     border-radius: 5px;
@@ -48,7 +52,8 @@
     transition: all 0.3s ease;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form #name:focus, .contact-form #email:focus, 
+.contact-form #message:focus {
     border-color: #7a69b8;
 }
 

@@ -6,6 +6,9 @@ import { Home } from './pages/home/Home';
 import { Faqs } from './pages/faqs/Faqs'
 import { Contact } from './pages/contact/Contact'
 import './index.css'
+import 'primeicons/primeicons.css';
+import 'primereact/resources/primereact.min.css'; 
+import "primereact/resources/themes/lara-light-indigo/theme.css";  
 
 const App = () => (
     <div>

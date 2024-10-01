@@ -1,16 +1,9 @@
 import './Faqs.css';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React from 'react';
+import { Accordion, AccordionTab } from 'primereact/accordion';
 
 export const Faqs = () => {
-    // Usamos un estado para gestionar qué preguntas están abiertas
-    const [activeIndex, setActiveIndex] = useState(null);
-
-    // Función para manejar el cambio de estado
-    const toggleFaq = (index) => {
-        // Si el índice ya está activo, lo cerramos (ponemos en null), si no, lo activamos
-        setActiveIndex(activeIndex === index ? null : index);
-    };
     return (
         <>
             <section className="faq-hero">
@@ -26,37 +19,26 @@ export const Faqs = () => {
             {/* FAQ Section */}
             <section className="faq">
                 <div className="faq-container">
-                    <div className={`faq-item ${activeIndex === 0 ? 'active' : ''}`}>
-                        <button className="faq-question" onClick={() => toggleFaq(0)}>
-                            <span>¿Cuál es la mejor comida para perros?</span>
-                        </button>
-                        <div className="faq-answer" style={{ maxHeight: activeIndex === 0 ? '150px' : '0' }}>
-                            <p>Una de las comidas más saludable para perros incluye carne magra, arroz, vegetales como zanahoria,
-                                y frutas como manzanas (sin sus semillas). Siempre asegúrate de evitar comida tóxica, como chocolate y cebolla.</p>
-                        </div>
-                    </div>
-
-                    <div className={`faq-item ${activeIndex === 1 ? 'active' : ''}`}>
-                        <button className="faq-question" onClick={() => toggleFaq(1)}>
-                            <span>¿Los gatos pueden comer misma comida que los perros?</span>
-                            <i className="fas fa-chevron-down"></i>
-                        </button>
-                        <div className="faq-answer" style={{ maxHeight: activeIndex === 1 ? '150px' : '0' }}>
-                            <p>No, los gatos tienen necesidades dietarias muy específicas, incluyendo mayor cantidad deproteína y una
-                                cantidad determinada de aminoácidos como la taurina, la cual no está presente en comida para perros.</p>
-                        </div>
-                    </div>
-
-                    <div className={`faq-item ${activeIndex === 2 ? 'active' : ''}`}>
-                        <button className="faq-question" onClick={() => toggleFaq(2)}>
-                            <span>¿Qué snacks le puedo dar a las mascotas pequeñas?</span>
-                            <i className="fas fa-chevron-down"></i>
-                        </button>
-                        <div className="faq-answer" style={{ maxHeight: activeIndex === 2 ? '150px' : '0' }}>
-                            <p>A las mascotas como conejos o hamsters les encantan las frutas y vegetales como zanahorias, espinaca, y frutillas.
-                                De todos modos, se deben prevenir los snacks en exceso para evitar obesidad.</p>
-                        </div>
-                    </div>
+                    <Accordion multiple>
+                        <AccordionTab header={<span id='faq-question'>¿Cuál es la mejor comida para perros?</span>}>
+                            <div className="faq-answer">
+                                <p>Una de las comidas más saludables para perros incluye carne magra, arroz, vegetales como zanahoria,
+                                    y frutas como manzanas (sin sus semillas). Siempre asegúrate de evitar comida tóxica, como chocolate y cebolla.</p>
+                            </div>
+                        </AccordionTab>
+                        <AccordionTab header={<span>¿Los gatos pueden comer la misma comida que los perros?</span>}>
+                            <div className="faq-answer">
+                                <p>No, los gatos tienen necesidades dietarias muy específicas, incluyendo mayor cantidad de proteína y una
+                                    cantidad determinada de aminoácidos como la taurina, la cual no está presente en comida para perros.</p>
+                            </div>
+                        </AccordionTab>
+                        <AccordionTab header={<span>¿Qué snacks le puedo dar a las mascotas pequeñas?</span>}>
+                            <div className="faq-answer">
+                                <p>A las mascotas como conejos o hamsters les encantan las frutas y vegetales como zanahorias, espinaca, y frutillas.
+                                    De todos modos, se deben prevenir los snacks en exceso para evitar obesidad.</p>
+                            </div>
+                        </AccordionTab>
+                    </Accordion>
                 </div>
             </section>
         </>

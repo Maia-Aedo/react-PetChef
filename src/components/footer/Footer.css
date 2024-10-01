@@ -3,6 +3,10 @@ footer {
     background-color: #db5b9a;
 }
 
+a{
+    font-family: 'Lora';
+}
+
 .footer{
     width: 100%;
     height: auto;
