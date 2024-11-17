@@ -1,13 +1,13 @@
 .home-main {
-    background-image: url('https://baonadogs.com/wp-content/uploads/2022/05/comida-casera-para-perros-scaled.jpg');
-    background-size: cover; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('https://baonadogs.com/wp-content/uploads/2022/05/comida-casera-para-perros-scaled.jpg');
+    background-size: cover;
     height: 80vh;
-    margin-top: 20px;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -29,7 +29,7 @@
     text-decoration: none;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #879cdb;
 }
 
@@ -38,7 +38,7 @@
     background-color: #f7f7f7;
     align-items: center;
     text-align: center;
-    height: 140px;
+    height: 240px;
     margin-bottom: 20px;
 }
 
@@ -49,6 +49,7 @@
 
 .home-about p {
     font-size: 1.2rem;
+    padding: 20px;
 }
 
 .recipes-section {
@@ -58,8 +59,10 @@
 
 .recipes-section h2 {
     font-size: 2rem;
+    padding: 15px 0;
 }
 
+/* Cards */
 .card-container {
     display: flex;
     justify-content: space-around;
@@ -68,11 +71,37 @@
 
 .card {
     background-color: #f8f9fa;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
     text-align: center;
     margin-bottom: 20px;
+}
+
+#card-button {
+    padding: 12.5px 20px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #7a69b8;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    margin: 10px;
+}
+
+#card-button:hover {
+    background-color: #db5b9a;
+    box-shadow: 0 0 15px #ff74ba;
+    transform: scale(1.1);
+}
+
+#card-button:active {
+    background-color: #7a69b8;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
 }
 
 .card img {
@@ -80,6 +109,7 @@
     height: 180px;
     margin-bottom: 15px;
 }
+/* Cards termina */
 
 .section-padding {
     padding: 60px 0;
@@ -90,6 +120,67 @@
     margin: 0 auto;
 }
 
+/* Comments */
+#comments-section {
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    margin-top: 40px;
+}
+
+#comments-section  h2{
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#comments-section  p{
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card-comment {
+    display: flex;
+    align-items: center;
+    border: 3px solid white;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.comment-image {
+    width: 70px;
+    height: 70px;
+    /* background: url(''); */
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 1rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.comment-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.comment-descripion {
+    font-size: 0.9rem;
+    color: black;
+    line-height: 1.4;
+}
+
+.comment-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Comments termina */
+
+/* parallax */
 .home-parallax {
     background-image: linear-gradient(to bottom, #7362b3, #885db9, #a174d4, #6573c2, #92c1de, #98c4e7, #ab99e0, #c77cc6, #db5b9a);
     background-attachment: fixed;
@@ -102,14 +193,15 @@
     margin-top: 20px;
 }
 
-.home-parallax h2{
+.home-parallax h2 {
     font-size: 2rem;
 }
 
-.home-parallax p{
+.home-parallax p {
     font-size: 18px;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .home-main-text h1 {
         font-size: 2rem;
@@ -119,11 +211,15 @@
         font-size: 1.2rem;
     }
 
-    .home-about h2, .recipes-section h2, .home-parallax-text h2 {
+    .home-about h2,
+    .recipes-section h2,
+    .home-parallax-text h2 {
         font-size: 2rem;
     }
 
-    .home-about p, .home-main-text p, .home-parallax-text p {
+    .home-about p,
+    .home-main-text p,
+    .home-parallax-text p {
         font-size: 1rem;
     }
 
@@ -131,7 +227,7 @@
         margin-bottom: 20px;
     }
 
-    .card img{
+    .card img {
         width: 160px;
         height: 130px;
     }

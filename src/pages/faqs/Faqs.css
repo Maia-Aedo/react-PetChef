@@ -1,12 +1,13 @@
 .faq-hero {
-    background-image: url('https://www.losandes.com.ar/resizer/v2/E6KUM2BDWBF7HOR4GZ6UZU3NMA.jpg?smart=true&auth=e5a224207c91fc9cec19fe581d5fa9b322b01fef71b4a746c8d79e9d2d91073d&width=1200&height=630');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+        url('https://www.losandes.com.ar/resizer/v2/E6KUM2BDWBF7HOR4GZ6UZU3NMA.jpg?smart=true&auth=e5a224207c91fc9cec19fe581d5fa9b322b01fef71b4a746c8d79e9d2d91073d&width=1200&height=630');
     background-size: cover;
     background-position: center;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -19,6 +20,7 @@
 .faq-hero-text p {
     font-size: 21px;
     margin-bottom: 10px;
+    padding: 0 25px;
 }
 
 .faq {
@@ -35,36 +37,25 @@
     width: 70%;
 }
 
-.p-accordion .p-accordion-content{
-    margin-bottom: 20px;
+.faq-container .p-accordion-tab {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.p-accordion-header-link {
-    background-color: transparent;
+.faq-container .p-accordion-header #faq-question{
+    background-color: #dc9696;
     color: white;
     font-size: 1.1rem;
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     border: none;
-}
-
-.p-accordion-header{
-    background-color: #dc9696;
-    color: white;
-    border: none;
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.p-accordion-content {
+.faq-container .p-accordion-content {
     background-color: white;
     border-left: 3px solid #db5b9a;
     margin-top: 5px;
@@ -72,7 +63,20 @@
     padding: 10px;
 }
 
-.faq-answer p{
-    font-size: 1.1rem;
-    padding: 1px;
+.faq-answer {
+    padding: 10px 0;
 }
+
+.faq-answer p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.faq-container .p-accordion-header:hover {
+    background-color: #d37575;
+}
+
+.faq-container .accordion-item {
+    margin-bottom: 15px;
+}
+
