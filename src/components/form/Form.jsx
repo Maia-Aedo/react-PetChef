@@ -28,7 +28,7 @@ export const Form = () => {
         // Guarda datos en localStorage
         localStorage.setItem('subscriptionData', JSON.stringify(formData));
         // Redirección
-        navigate('/payment', { state: { formData } });
+        navigate('/pagar-suscripcion', { state: { formData } });
     };
 
     return (

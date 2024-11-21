@@ -14,6 +14,7 @@ export const PaymentPage = () => {
         const storedData = localStorage.getItem('subscriptionData');
         if (storedData) {
             setFormData(JSON.parse(storedData));
+            navigate('/mis-pagos')
         } else {
             alert('No hay datos, por favor completa el formulario primero.');
             navigate('/'); // Si no hay datos, redirige a home
