@@ -149,15 +149,26 @@
     border-radius: 8px;
 }
 
-.comment-image {
+#comment-image {
     width: 70px;
     height: 70px;
     /* background: url(''); */
     border-radius: 50%;
-    background-color: #ddd;
     margin-right: 1rem;
     background-size: cover;
-    background-position: center;
+}
+
+.image1{
+    background: url('https://lh3.googleusercontent.com/a-/ALV-UjVkIOUVRq-JqkbGYs_8fA1x7Eav_O0pfvVeWVcO4I5Amj2nz02uhQ=w36-h36-p-rp-mo-ba2-br100');
+    background-position: fit;
+}
+
+.image2{
+    background: url('https://lh3.googleusercontent.com/a/ACg8ocL7IgVEZ_YyJw4ESj3HYHAOUX395zVb756K5UqRCnWD8NL2OXFg=w36-h36-p-rp-mo-br100');
+}
+
+.image3{
+    background: url('https://lh3.googleusercontent.com/a-/ALV-UjX0rpDjHV64cSAtaX-znlEcgBz_bqwmxC18hVs8Pl1xJ7ZphfJ9=w36-h36-p-rp-mo-ba3-br100');
 }
 
 .comment-title {

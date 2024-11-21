@@ -5,9 +5,10 @@
 }
 
 #home-form {
-    width: 500px;
-    height: 400px;
-    background: url('https://www.kienyke.com/sites/default/files/2022-07/Alimento%20mascotas%202.jpeg');
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://www.kienyke.com/sites/default/files/2022-07/Alimento%20mascotas%202.jpeg');
     background-position: center;
     background-size: cover;
     padding: 40px 60px;
@@ -15,8 +16,13 @@
     align-content: center;
     border-radius: 10px;
 
-    .home-form-title {
+    h2{
         font-size: 2rem;
+        color: white;
+    }
+
+    p{
+        color: white;
     }
 
     input {

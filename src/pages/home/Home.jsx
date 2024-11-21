@@ -43,7 +43,7 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-            {/* Sección de Contacto */}
+            {/* Sección de Suscripción */}
             <Form />
             {/* Sección de Comentarios */}
             <section id="comments-section">
@@ -51,7 +51,7 @@ export const Home = () => {
                 <p>Queremos saber qué piensan nuestros usuarios sobre las recetas. Comparte tus experiencias o sugerencias para ayudar a otros amantes de mascotas.</p>
 
                 <div className="card-comment">
-                    <div className="comment-image"></div>
+                    <div id="comment-image" className="image1"></div>
                     <div className="comment-content">
                         <div className="comment-title">Laura y Rocky</div>
                         <div className="comment-descripion">
@@ -61,7 +61,7 @@ export const Home = () => {
                 </div>
 
                 <div className="card-comment">
-                    <div className="comment-image"></div>
+                    <div id="comment-image" className="image2"></div>
                     <div className="comment-content">
                         <div className="comment-title">Andrea</div>
                         <div className="comment-descripion">
@@ -71,7 +71,7 @@ export const Home = () => {
                 </div>
 
                 <div className="card-comment">
-                    <div className="comment-image"></div>
+                    <div id="comment-image" className="image3"></div>
                     <div className="comment-content">
                         <div className="comment-title">Juan y Luna</div>
                         <div className="comment-descripion">

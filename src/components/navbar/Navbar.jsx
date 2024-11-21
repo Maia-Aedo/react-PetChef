@@ -27,7 +27,7 @@ export const Navbar = () => {
 							</Link>
 
 							{/* Menú principal */}
-							<ul c0lassName={`menu ${menuOpen ? "open" : ""}`}>
+							<ul className={`menu ${menuOpen ? "open" : ""}`}>
 								<li id="navbar-li"><Link to='/' onClick={closeMenu}>Inicio</Link></li>
 								<li id="navbar-li"><Link to='/contacto' onClick={closeMenu}>Subir Mi Receta</Link></li>
 								<li id="navbar-li"><Link to='/preguntas-frecuentes' onClick={closeMenu}>Preguntas Frecuentes</Link></li>
