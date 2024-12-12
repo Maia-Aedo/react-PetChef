@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Creamos instancia de api usando la url base
 const api = axios.create({
   baseURL: 'http://localhost:3306',
   headers: {

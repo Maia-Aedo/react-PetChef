@@ -6,12 +6,12 @@ import { registerPayment } from '../../services/paymentService.js';
 export const PaymentPage = () => {
     const [formData, setFormData] = useState({});
     const [amount, setAmount] = useState(15.99); // Precio de la suscripcion
-    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     // Obtiene datos del form guardados en el localstorage
     useEffect(() => {
         const storedData = localStorage.getItem('subscriptionData');
+        // si existe, actualiza el estado y redirige
         if (storedData) {
             setFormData(JSON.parse(storedData));
             navigate('/mis-pagos')
@@ -23,16 +23,13 @@ export const PaymentPage = () => {
 
     // Manejo de pago
     const handlePayment = async () => {
-        setLoading(true);
         try {
-            await registerPayment(formData.id || 1, amount, 'fake-token'); // Registra pago
+            await registerPayment(formData.id, amount, 'fake-token'); // Registra pago
             alert('Pago realizado con éxito. ¡Gracias por suscribirte!');
             localStorage.removeItem('subscriptionData'); // Limpia datos después del pago
             navigate('/mis-pagos'); // Redirige a pagos
         } catch (err) {
             alert('Hubo un problema al procesar tu pago. Intenta nuevamente.');
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -57,9 +54,7 @@ export const PaymentPage = () => {
 
                     <button 
                         className="payment-button" 
-                        onClick={handlePayment} 
-                        disabled={loading}>
-                        {loading ? 'Procesando...' : 'Confirmar y Pagar'}
+                        onClick={handlePayment}>
                     </button>
                 </>
             ) : (

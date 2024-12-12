@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './Contact.css'
 
 export const Contact = () => {
+    // Definimos propiedades de usuario (inician vacías)
     const [user, setUser] = useState({ name: '', email: '' });
+    // Propiedades para las recetas tambien inician vacías
     const [recipe, setRecipe] = useState({ title: '', description: '' });
-    const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
 
     // Función para guardar la receta en localStorage
@@ -30,7 +31,6 @@ export const Contact = () => {
 
         try {
             createRecipe(newRecipe); // Guardamos en localStorage
-            setSuccess(true);
             alert('Receta creada con éxito');
             // Vacía formularios
             setUser({ name: '', email: '' });
@@ -110,7 +110,6 @@ export const Contact = () => {
 
                         <button type="submit">Enviar</button>
                     </form>
-                    {success && <p className="success-message">Receta enviada con éxito.</p>}
                 </div>
             </div>
         </div>

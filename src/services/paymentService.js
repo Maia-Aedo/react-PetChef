@@ -1,8 +1,10 @@
-import api from './api.js';;
+import api from './api.js';
+// Accedemos a métodos de los pagos en la api
 
-// Registrar un pago
+// Registro de pago
 export const registerPayment = async (usuarioId, monto) => {
     try {
+        // publica el pago
         const response = await api.post('/pagos/registrar', { usuarioId, monto });
         return response.data;
     } catch (error) {
@@ -13,6 +15,7 @@ export const registerPayment = async (usuarioId, monto) => {
 // Obtener pagos de un usuario
 export const getPayments = async (token) => {
     try {
+        // obtiene pagos
         const response = await api.get('/pagos/usuario', {
             headers: { Authorization: `Bearer ${token}` },
         });

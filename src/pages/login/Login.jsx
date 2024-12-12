@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 export const Login = () => {
+  // iniciamos estado para las credenciales (inician vacias) - setCredentials actualizan los valores
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const [error, setError] = useState(null);
+  // hook para redirigir
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {

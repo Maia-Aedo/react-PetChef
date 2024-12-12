@@ -13,7 +13,6 @@ export const PaymentsList = () => {
                 setError('No se encontró un token válido. Por favor, inicia sesión.');
                 return;
             }
-
             try {
                 const userPayments = await getPayments(token);
                 setPayments(userPayments);
@@ -21,7 +20,6 @@ export const PaymentsList = () => {
                 setError('Error al obtener los pagos.');
             }
         };
-
         fetchPayments();
     }, []);
 
